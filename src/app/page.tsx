@@ -207,7 +207,7 @@ export default function Home() {
             Ready to Transform Your Farm?
           </h2>
           <p className="mx-auto mb-8 max-w-2xl text-lg">
-            Join hundreds of Kenyan farmers who are already benefiting from FarmSync's innovative farm management solutions.
+            Join hundreds of Kenyan farmers who are already benefiting from FarmSyncs innovative farm management solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 

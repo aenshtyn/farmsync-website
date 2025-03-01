@@ -1,24 +1,54 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #2E7D32;
+  --secondary: #795548;
+  --accent: #1E88E5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-black;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold leading-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  a {
+    @apply transition-colors duration-200;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom button styles */
+@layer components {
+  .btn-primary {
+    @apply rounded-lg bg-green-700 px-6 py-3 font-medium text-white transition-colors hover:bg-green-800;
+  }
+
+  .btn-secondary {
+    @apply rounded-lg border border-green-700 bg-transparent px-6 py-3 font-medium text-green-700 transition-colors hover:bg-green-700 hover:text-white;
+  }
+
+  .btn-accent {
+    @apply rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700;
+  }
 }
